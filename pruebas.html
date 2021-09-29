@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de javascript</title>
+</head>
+
+<body>
+    <script>
+        var edad = prompt("Indica tu edad:")
+        while (!confirm("tu edad es:" + edad)) {
+            edad = prompt("Indica tu edad:")
+        }
+        if (edad > 18) {
+            alert("Puede ir a la disco")
+        } else {
+            alert("paila neño.")
+            document.write("Esta página se autodestruirá en 5 segundos.")
+            setInterval(function () {
+                while (count > 0) {
+                    count = 5;
+                    document.write("Esta página se autodestruirá en " + count + " segundos.")
+                    count--;
+                }
+            }, 1000);
+            setTimeout(cerrar, 5000)
+        }
+        function cerrar() {
+            window.close()
+        }
+
+
+        //identificar el navegador 
+        document.write("codigo_Nombre: " + navigator.appCodeName);
+        document.write("<br> Nombre del Navegador: " + navigator.appName);
+        document.write("<br>Version del Navegador: " + navigator.appVersion);
+        document.write("<br>Cookies habilitadas: " + navigator.cookieEnabled);
+        document.write("<br>Plataforma: " + navigator.platform);
+        document.write("<br>Agente: " + navigator.userAgent);
+
+    </script>
+
+</body>
+
+</html>

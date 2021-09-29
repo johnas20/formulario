@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <h1>Registro para vacunación COVID 19</h1>
+    <form action="" method="GET">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label>Nombre: </label>
+            <input type="text" name="Nombre" id="">
+            <br><br>
+            <label>Usuario: </label>
+            <input type="text" name="Usuario" id="usrtxt">
+        </fieldset>
+        <fieldset>
+            <legend>Información Adicional</legend>
+            <label>Sexo: </label>
+            <input type="radio" name="sexo" id="">
+            Hombre
+            <input type="radio" name="sexo" id="">
+            Mujer
+            <br><br>
+            <label>Correo: </label>
+            <input type="email" name="Correo" id="ematxt">
+            <br><br>
+            <label>Contraseña: </label>
+            <input type="password" name="Clave" id="pwdtxt"><br />
+            <img src="img/view.png" alt="" width="40px" onmouseover="mostrarPwd()" onmouseout="ocultarPwd()">
+            <br><br>
+            <label for="Cargo">Rol en el Equipo: </label>
+            <select name="Cargo" id="">
+                <option value="" selected="selected">Selecciona</option>
+                <option value="">Programador</option>
+                <option value="">Analista</option>
+                <option value="">Soporte Técnico</option>
+                <option value="">Otro</option>
+            </select>
+            <p>
+                <input type="checkbox" name="Condiciones" id="">
+                "Declaro haber leído y aceptar las
+                condiciones generales del programa y la normativa sobre protección de datos".
+            </p>
+        </fieldset>
+        <br><br>
+        <button type="submit" onclick="validar_fomulario()">Enviar</button>
+        <button type="reset">Borrar</button>
+    </form>
+</body>
+
+</html>
